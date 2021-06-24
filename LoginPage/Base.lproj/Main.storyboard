@@ -45,6 +45,9 @@
                                 <rect key="frame" x="146" y="372" width="122" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Forgot Password"/>
+                                <connections>
+                                    <action selector="ForgetPasswordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e70-R6-FJc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NF0-mv-6ZP">
                                 <rect key="frame" x="20" y="429" width="374" height="50"/>
@@ -95,6 +98,9 @@
                             <constraint firstItem="CTp-Dy-PMS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xcF-Gj-QwY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="CodeplayonLabel" destination="CTp-Dy-PMS" id="wyN-eN-4xZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
