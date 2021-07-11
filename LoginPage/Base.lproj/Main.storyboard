@@ -32,7 +32,7 @@
                                 <color key="textColor" red="0.19223335759999999" green="0.45272659320000003" blue="0.93618069940000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Fb-LL-BFu">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Fb-LL-BFu">
                                 <rect key="frame" x="20" y="243.5" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -107,8 +107,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="r2V-fO-WSa"/>
                     <connections>
-                        <outlet property="CodeplayonLabel" destination="CTp-Dy-PMS" id="wyN-eN-4xZ"/>
-                        <outlet property="LogInButton" destination="NF0-mv-6ZP" id="tsQ-Hg-51j"/>
+                        <outlet property="emailTextField" destination="2Fb-LL-BFu" id="xsW-sH-kBd"/>
+                        <outlet property="logInButton" destination="NF0-mv-6ZP" id="5oh-eb-yIA"/>
+                        <outlet property="passwordTextField" destination="Jcx-ed-AQV" id="HgL-rP-8TD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
