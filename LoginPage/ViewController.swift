@@ -10,8 +10,12 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var logInButton: UIButton!
+    
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var emailFieldStatus: UILabel!
+    
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var passwordFieldStatus: UILabel!
     
     @IBAction func ForgetPasswordButton(_ sender: Any) {
         print("Forget Password Button pressed.")
@@ -20,49 +24,72 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        logInButton.isEnabled = false
-        logInButton.backgroundColor = UIColor.gray
+        emailFieldStatus.text = ""
+        passwordFieldStatus.text = ""
+        isButtonEnabled(false)
         
-        self.emailTextField.addTarget(self, action: #selector(textFieldEditingChanged), for: .editingChanged)
+        self.emailTextField.addTarget(self, action: #selector(emailTextFieldChanged), for: .editingChanged)
         
         self.passwordTextField.delegate = self
-        self.passwordTextField.addTarget(self, action: #selector(textFieldEditingChanged), for: .editingChanged)
+        self.passwordTextField.addTarget(self, action: #selector(passwordTextFieldChanged), for: .editingChanged)
+        
     }
     
-    @objc private func textFieldEditingChanged() {
+    @objc private func emailTextFieldChanged() {
         guard let email = emailTextField?.text else { return }
+        
+        if !email.validateEmail() {
+            emailFieldStatus.text = "Invalid email"
+        } else {
+            emailFieldStatus.text = ""
+        }
+        
+        enableLoginButton()
+    }
+    
+    @objc private func passwordTextFieldChanged() {
         guard let password = passwordTextField?.text else { return }
         
-        if email.validateEmail() && password.validatePassword() {
-            logInButton.isEnabled = true
-            logInButton.backgroundColor = UIColor.blue
+        if password.count < 8 {
+            passwordFieldStatus.text = "Should be of length at least 8"
+        } else if !password.containsUpperCase() {
+            passwordFieldStatus.text = "Should contain at least an uppercase character"
+        } else if !password.containsLowerCase() {
+            passwordFieldStatus.text = "Should contain at least a lowercase character"
+        } else if !password.containsDigit() {
+            passwordFieldStatus.text = "Should contain at least a digit"
+        } else if !password.containsSpecialCharacters() {
+            passwordFieldStatus.text = "Should contain at least a special character $@!%*?&#"
+        } else if !password.validatePassword() {
+            passwordFieldStatus.text = "Remove special characters other than $@!%*?&#"
         } else {
-            logInButton.isEnabled = false
-            logInButton.backgroundColor = UIColor.gray
+            passwordFieldStatus.text = ""
         }
+        
+        enableLoginButton()
+        
     }
+    
+    @objc private func enableLoginButton() {
+        guard let email = emailTextField?.text else { return }
+        guard let password = passwordTextField?.text else { return }
+
+
+        if email.validateEmail() && password.validatePassword() {
+            isButtonEnabled(true)
+        } else {
+           isButtonEnabled(false)
+        }
+        
+    }
+    
+    private func isButtonEnabled(_ value: Bool) {
+        logInButton.isEnabled = value
+        logInButton.backgroundColor = value ? UIColor.blue: UIColor.gray
+    }
+    
 }
 
-extension String {
-    
-    func validateEmail() -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
-        return applyPredicateOnRegex(regexStr: emailRegEx)
-    }
-    
-    func validatePassword() -> Bool {
-        let passRegEx = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&#])[A-Za-z\\d$@$!%*?&#]{8,}"
-
-        return applyPredicateOnRegex(regexStr: passRegEx)
-    }
-    
-    func applyPredicateOnRegex(regexStr: String) -> Bool {
-        let trimmedString = self.trimmingCharacters(in: .whitespaces)
-        let validateString = NSPredicate(format: "SELF MATCHES %@", regexStr)
-        let isValidString = validateString.evaluate(with: trimmedString)
-        return isValidString
-    }
-}
 
 //MARK:- UITextFieldDelegate
 

@@ -15,6 +15,7 @@
 		9293E07726831E2C007E6769 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9293E07526831E2C007E6769 /* LaunchScreen.storyboard */; };
 		9293E08226831E2C007E6769 /* LoginPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9293E08126831E2C007E6769 /* LoginPageTests.swift */; };
 		9293E08D26831E2C007E6769 /* LoginPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9293E08C26831E2C007E6769 /* LoginPageUITests.swift */; };
+		92D51B58269C16E900B84AB4 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D51B57269C16E900B84AB4 /* ExtensionString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9293E08826831E2C007E6769 /* LoginPageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginPageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9293E08C26831E2C007E6769 /* LoginPageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageUITests.swift; sourceTree = "<group>"; };
 		9293E08E26831E2C007E6769 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92D51B57269C16E900B84AB4 /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				9293E06A26831E2B007E6769 /* AppDelegate.swift */,
 				9293E06C26831E2B007E6769 /* SceneDelegate.swift */,
 				9293E06E26831E2B007E6769 /* ViewController.swift */,
+				92D51B57269C16E900B84AB4 /* ExtensionString.swift */,
 				9293E07026831E2B007E6769 /* Main.storyboard */,
 				9293E07326831E2C007E6769 /* Assets.xcassets */,
 				9293E07526831E2C007E6769 /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92D51B58269C16E900B84AB4 /* ExtensionString.swift in Sources */,
 				9293E06F26831E2B007E6769 /* ViewController.swift in Sources */,
 				9293E06B26831E2B007E6769 /* AppDelegate.swift in Sources */,
 				9293E06D26831E2B007E6769 /* SceneDelegate.swift in Sources */,
