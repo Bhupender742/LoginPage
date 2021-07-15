@@ -9,15 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var logInButton: UIButton!
+    @IBOutlet private weak var logInButton: UIButton!
     
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var emailFieldStatus: UILabel!
+    @IBOutlet private weak var emailTextField: UITextField!
+    @IBOutlet private weak var emailFieldStatus: UILabel!
     
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var passwordFieldStatus: UILabel!
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var passwordFieldStatus: UILabel!
     
-    @IBAction func ForgetPasswordButton(_ sender: Any) {
+    @IBAction private func ForgetPasswordButton(_ sender: Any) {
         print("Forget Password Button pressed.")
     }
 
