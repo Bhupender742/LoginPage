@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		924761B826A137B60014D728 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924761B726A137B60014D728 /* NetworkManager.swift */; };
 		926493E626A004D2007628CA /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926493E526A004D2007628CA /* HeroViewController.swift */; };
 		926493E826A004F3007628CA /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926493E726A004F3007628CA /* CustomCollectionViewCell.swift */; };
 		926493EB26A00628007628CA /* HeroDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926493E926A005F2007628CA /* HeroDataModel.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		924761B726A137B60014D728 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		926493E526A004D2007628CA /* HeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
 		926493E726A004F3007628CA /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		926493E926A005F2007628CA /* HeroDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDataModel.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				9293E06C26831E2B007E6769 /* SceneDelegate.swift */,
 				926493E526A004D2007628CA /* HeroViewController.swift */,
 				9293E06E26831E2B007E6769 /* ViewController.swift */,
+				924761B726A137B60014D728 /* NetworkManager.swift */,
 				92D51B57269C16E900B84AB4 /* ExtensionString.swift */,
 				9293E07026831E2B007E6769 /* Main.storyboard */,
 				926493E926A005F2007628CA /* HeroDataModel.swift */,
@@ -274,6 +277,7 @@
 				926493E826A004F3007628CA /* CustomCollectionViewCell.swift in Sources */,
 				92D51B58269C16E900B84AB4 /* ExtensionString.swift in Sources */,
 				926493EB26A00628007628CA /* HeroDataModel.swift in Sources */,
+				924761B826A137B60014D728 /* NetworkManager.swift in Sources */,
 				9293E06F26831E2B007E6769 /* ViewController.swift in Sources */,
 				9293E06B26831E2B007E6769 /* AppDelegate.swift in Sources */,
 				9293E06D26831E2B007E6769 /* SceneDelegate.swift in Sources */,
